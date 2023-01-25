@@ -10,7 +10,10 @@ Tools I have included is SearchSploit for some reason metasploit is there withou
 
 # Installation
 
-To install just git clone the repo https://github.com/Warren3013/pimpmyparry.git 
-cd pimpmyparry
-chmod +x pimpmyparry.sh
-./pimpmyparry.sh
+-To install just git clone the repo https://github.com/Warren3013/pimpmyparry.git 
+
+- cd pimpmyparry
+
+- chmod +x pimpmyparry.sh
+
+- ./pimpmyparry.sh
