@@ -4,20 +4,20 @@
 jp2a images.jpeg
 
 
-distro_check () {
-	distro=$(uname -a | grep -i -c 'parrot') #check if the linux distribution is Parrot OS
+#check if the correct distro is parrot os
+	distro=$(uname -a | grep -i -c 'parrot') 
     if [ "$distro" -ne 1 ] 
      then echo -e " Parrot OS Linux Not Detected "
      exit
     fi
-  	}
 
-check_for_root () {
+
+#check if the script is run as root
     if [ "$EUID" -ne 0 ]
-      then echo -e "\n\n Script must be run with sudo ./pimpmyparry.sh or as root \n"
+      then echo -e "Script must be run with sudo"
       exit
     fi
-    }
+
 
 inst_searchsploit () {
 	git clone https://gitlab.com/exploit-database/exploitdb.git /opt/exploit-database
@@ -40,8 +40,7 @@ inst_httpx () {
 	
 
 
-check_for_root
-distro_check
+
 inst_searchsploit 
 inst_evilwinrm
 inst_ffuf
