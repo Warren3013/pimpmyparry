@@ -5,8 +5,8 @@ jp2a images.jpeg
 
 
 #check if the correct distro is parrot os
-	distro=$(uname -a | grep -i -c 'parrot') 
-    if [ "$distro" -ne 1 ] 
+	distrobution=$(uname -a | grep -i -c 'parrot') 
+    if [ "$distrobution" -ne 1 ] 
      then echo -e " Parrot OS Linux Not Detected "
      exit
     fi
